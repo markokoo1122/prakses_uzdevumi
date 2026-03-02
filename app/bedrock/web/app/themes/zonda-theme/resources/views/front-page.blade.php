@@ -1,1 +1,3 @@
-<h1>ZONDA HOMEPAGE</h1>
+<?php get_header(); ?>
+
+<?php get_footer(); ?>
