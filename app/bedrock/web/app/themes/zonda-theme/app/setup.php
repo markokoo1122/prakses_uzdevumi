@@ -161,3 +161,15 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+/**
+ * Reģistrēt un ielādēt tēmas stilus un skriptus lapas priekšpusē.
+ *
+ * @return void
+ */
+add_action('wp_enqueue_scripts', function () {
+    // Šī rinda pateiks WordPress ielādēt tavu app.css un app.js caur Vite
+    echo \Illuminate\Support\Facades\Vite::withEntryPoints([
+        'resources/css/app.css',
+        'resources/js/app.js',
+    ])->toHtml();
+}, 100);
