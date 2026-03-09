@@ -100,3 +100,37 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+
+
+// In your theme's functions.php or a separate file included there
+add_action('wp_enqueue_scripts', 'zonda_enqueue_styles');
+
+function zonda_enqueue_styles() {
+    // Main theme style
+    wp_enqueue_style(
+        'theme-main', // Handle, unique name
+        get_template_directory_uri() . '/resources/css/main.css', // Path to CSS
+        array(), // Dependencies
+        '1.0',   // Version
+        'all'    // Media
+    );
+
+    // Footer-specific CSS
+    wp_enqueue_style(
+        'footer-style',
+        get_template_directory_uri() . '/resources/css/footer.css',
+        array('theme-main'), // Make it dependent on main.css if needed
+        '1.0',
+        'all'
+    );
+
+    // Header-specific CSS
+    wp_enqueue_style(
+        'header-style',
+        get_template_directory_uri() . '/resources/css/header.css',
+        array('theme-main'),
+        '1.0',
+        'all'
+    );
+}
