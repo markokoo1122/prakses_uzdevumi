@@ -1,13 +1,15 @@
 <header class="site-header">
   <?php wp_head(); ?>
+
   <div class="header-container">
 
-
     <div class="logo">
-      <img 
-        src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.png" 
-        alt="Zonda Lighting Logo"
-      >
+      <?php
+    $logo = carbon_get_theme_option('crb_logo');
+    if ($logo) {
+        echo wp_get_attachment_image($logo, 'full', false, ['class' => 'site-logo']);
+    }
+    ?>
     </div>
 
     <nav class="main-nav">
@@ -16,7 +18,6 @@
       <a href="#">about us</a>
       <a href="#">contact</a>
     </nav>
-    
 
     <div class="icons">
       <svg class="icon" viewBox="0 0 24 24">

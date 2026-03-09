@@ -1,4 +1,18 @@
 <?php get_header(); ?>
+<?php
+$img1 = carbon_get_post_meta(get_the_ID(), 'section_image_1');
+$img2 = carbon_get_post_meta(get_the_ID(), 'section_image_2');
+$img3 = carbon_get_post_meta(get_the_ID(), 'section_image_3');
+$img4 = carbon_get_post_meta(get_the_ID(), 'section_image_4');
+$img5 = carbon_get_post_meta(get_the_ID(), 'section_image_5');
+$img6 = carbon_get_post_meta(get_the_ID(), 'section_image_6');
+$img7 = carbon_get_post_meta(get_the_ID(), 'section_image_7');
+$img8 = carbon_get_post_meta(get_the_ID(), 'section_image_8');
+$img9 = carbon_get_post_meta(get_the_ID(), 'section_image_9');
+$img11 = carbon_get_post_meta(get_the_ID(), 'section_image_11');
+$img12 = carbon_get_post_meta(get_the_ID(), 'section_image_12');
+$logo = carbon_get_post_meta(get_the_ID(), 'crb_logo');
+?>
 
 <main class="main-content">
 
@@ -8,9 +22,10 @@
 
             <div class="hero-content">
 
-                <img width="650" height="auto"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/banner.png"
-                    alt="Zonda Lighting Logo">
+                <?php  echo wp_get_attachment_image($img7, 'full', false, [
+                        'class' => 'hero-content'
+                ]); ?>
+                
 
             </div>
 
@@ -28,9 +43,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type1.jpg"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img1, 'large'); ?>
                 <hr>
                 <p>systems</p>
 
@@ -38,9 +51,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type2.png"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img2, 'large'); ?>
                 <hr>
                 <p>round luminaires</p>
 
@@ -48,9 +59,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type3.png"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img3, 'large'); ?>
                 <hr>
                 <p>linear luminaires</p>
 
@@ -58,9 +67,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type4.png"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img4, 'large'); ?>
                 <hr>
                 <p>surface luminaires</p>
 
@@ -68,9 +75,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type5.png"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img5, 'large'); ?>
                 <hr>
                 <p>recessed luminaires</p>
 
@@ -78,9 +83,7 @@
 
             <div class="product-card">
 
-                <img width="420" height="420"
-                    src="<?php echo get_template_directory_uri(); ?>/resources/images/lamp_type6.png"
-                    alt="Zonda Lighting Logo">
+                <?php echo wp_get_attachment_image($img6, 'large'); ?>
                 <hr>
                 <p>trimless luminaires</p>
 
@@ -99,7 +102,7 @@
 
             <div class="tall-image">
 
-                <img src="<?php echo get_template_directory_uri(); ?>/resources/images/tall.jpeg" alt="Tall Image">
+                <?php echo wp_get_attachment_image($img8, 'large'); ?>
                 <div class="label">FADING</div>
 
             </div>
@@ -108,16 +111,18 @@
 
                 <div class="tower1">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/resources/images/tower-img1.jpg"
-                        alt="Tower Top">
+                    <?php  echo wp_get_attachment_image($img9, 'full', false, [
+                        'class' => 'tower1'
+                    ]); ?>
                     <div class="label">ALLORA</div>
 
                 </div>
 
                 <div class="tower2">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/resources/images/tower-img2.jpeg"
-                        alt="Tower Bottom">
+                    <?php  echo wp_get_attachment_image($img9, 'full', false, [
+                        'class' => 'tower2'
+                    ]); ?>
                     <div class="label">GOBI</div>
 
                 </div>
@@ -134,16 +139,19 @@
         <div class="end-section">
             <div class="end-text">
                 <div class="e-text">
-                <p>True to our values and vision and with an eye for our high quality standards in our products, in our
-                    designs and in our service to our customers.<br><br>
-                    We strive for the highest quality in each of our lighting tools that we develop and deliver.<br><br>
-                    Our knowledge and operation enable us to propose products and solutions customized for each project.
+                    <p>True to our values and vision and with an eye for our high quality standards in our products, in
+                        our
+                        designs and in our service to our customers.<br><br>
+                        We strive for the highest quality in each of our lighting tools that we develop and
+                        deliver.<br><br>
+                        Our knowledge and operation enable us to propose products and solutions customized for each
+                        project.
                 </div>
                 </p>
             </div>
             <br>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/resources/images/end.png" alt="Bottom image">
+                <<?php echo wp_get_attachment_image($img12, 'large'); ?>
             </div>
         </div>
 
