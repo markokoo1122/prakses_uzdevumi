@@ -1,72 +1,90 @@
 .custom-footer {
   background-color: #e26161;
   color: #ffffff;
-  padding: 100px 40px;
+  padding: 60px 20px;
+  text-align: center;
 
   .footer-container {
-    max-width: 1300px;
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
-  .footer-left p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .footer-center {
-    text-align: center;
-    flex: 1;
-    max-width: 500px;
-    margin: 0 20px;
-
+  .footer-newsletter {
+    width: 100%;
+    
     h3 {
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 700;
       margin-bottom: 25px;
-      font-size: 18px;
+      line-height: 1.3;
     }
 
     .footer-form {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
+      width: 100%;
 
       input {
         width: 100%;
-        padding: 12px 15px;
+        padding: 15px;
         border: none;
+        border-radius: 4px;
         color: #333;
-        outline: none;
+        font-style: italic;
         background-color: white;
+        font-size: 16px;
       }
 
-      button {
+      .subscribe-btn {
         background-color: #000000;
         color: #ffffff;
         border: none;
-        padding: 12px 50px;
-        font-weight: bold;
-        text-transform: uppercase;
+        padding: 15px 60px;
+        font-weight: 500;
+        font-size: 18px;
         cursor: pointer;
+        border-radius: 4px;
+        text-transform: lowercase;
+        transition: opacity 0.3s;
 
-
-        .menu-toggle {
-          display: none;
-
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
   }
 
-  .footer-right {
-    .social-links {
-      display: flex;
-      align-items: center;
-      gap: 15px;
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 10px 0;
+
+    a svg {
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .footer-contact {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    
+    p {
+      font-size: 16px;
+      margin: 5px 0;
+      font-weight: 400;
+      opacity: 0.9;
     }
   }
 }
@@ -79,6 +97,8 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-section {
@@ -131,6 +151,7 @@
   }
 
   .products-section img {
+    max-width: 100%;
     width: 480px;
     height: 480px;
     object-fit: cover;

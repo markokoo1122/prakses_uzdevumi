@@ -11,7 +11,6 @@ $img8 = carbon_get_post_meta(get_the_ID(), 'section_image_8');
 $img9 = carbon_get_post_meta(get_the_ID(), 'section_image_9');
 $img11 = carbon_get_post_meta(get_the_ID(), 'section_image_11');
 $img12 = carbon_get_post_meta(get_the_ID(), 'section_image_12');
-$logo = carbon_get_post_meta(get_the_ID(), 'crb_logo');
 ?>
 
 <main class="main-content">
@@ -112,7 +111,7 @@ $logo = carbon_get_post_meta(get_the_ID(), 'crb_logo');
                 <div class="tower1">
 
                     <?php  echo wp_get_attachment_image($img9, 'full', false, [
-                        'class' => 'tower1'
+                        'class' => 'tower1-img'
                     ]); ?>
                     <div class="label">ALLORA</div>
 
@@ -120,8 +119,8 @@ $logo = carbon_get_post_meta(get_the_ID(), 'crb_logo');
 
                 <div class="tower2">
 
-                    <?php  echo wp_get_attachment_image($img9, 'full', false, [
-                        'class' => 'tower2'
+                    <?php  echo wp_get_attachment_image($img11, 'full', false, [
+                        'class' => 'tower2-img'
                     ]); ?>
                     <div class="label">GOBI</div>
 
